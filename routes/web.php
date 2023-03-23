@@ -22,4 +22,9 @@ Route::view('/about', 'about')->name('about');
 Route::view('/form', 'form')->name('form');
 
 Route::view('/login', 'login')->name('login');
+Route::get('/logout', function () {
+    auth()->logout();
+    session()->flush();
+    return redirect()->route('home');
+})->name('logout');
 Route::view('/register', 'register')->name('register');

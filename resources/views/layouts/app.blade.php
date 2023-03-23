@@ -29,28 +29,31 @@
 
     @include('layouts.partials.footer')
 
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     @livewireScripts
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('vendor/livewire-alert/livewire-alert.js') }}"></script>
+    <x-livewire-alert::flash />
     @yield('script')
     @stack('script')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
-    {{-- <script>
+    <script>
         $("a[target=popup]").click(function() {
             let href = $(this).prop('href');
             window.open(href, 'popup', 'width=600,height=600,scrollbars=yes');
         });
 
-        window.addEventListener("redirect_page", (event) => {
-            let url = event.detail.url
-            let delay = event.detail.delay ?? 2000
+        Livewire.on("redirect_page", event => {
+            let url = event.url
+            let delay = event.delay ?? 3000
             setTimeout(function() {
                 window.location = url;
             }, delay);
         });
-    </script> --}}
+    </script>
 </body>
 
 </html>

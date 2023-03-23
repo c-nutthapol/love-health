@@ -27,21 +27,26 @@
                     </li>
                 </ul>
                 <div>
-                    <a href="{{ route('register') }}" class="btn btn-custom-primary">
-                        สมัครสมาชิก
-                    </a>
-                    {{-- auth --}}
-                    {{-- <div class="dropdown">
-                        <button class="btn btn-custom-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Piyawat Loekthanom
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="#">ออกจากระบบ</a>
-                            </li>
-                        </ul>
-                    </div> --}}
+                    @if (auth()->check())
+                        {{-- auth --}}
+                        <div class="dropdown">
+                            <button class="btn btn-custom-primary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ auth()->user()->name }}
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('logout') }}">ออกจากระบบ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <a href="{{ route('register') }}" class="btn btn-custom-primary">
+                            สมัครสมาชิก
+                        </a>
+                    @endif
+
+
                 </div>
             </div>
         </div>
