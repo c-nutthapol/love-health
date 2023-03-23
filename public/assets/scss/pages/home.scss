@@ -1,0 +1,135 @@
+.section {
+    &-hero {
+        // overflow-x: hidden;
+        margin-top: 6.4rem;
+
+        &-text {
+            position: relative;
+            color: $text-color;
+            margin-bottom: 1rem;
+            z-index: 2;
+
+            h1 {
+                font-size: 4.5rem;
+                font-weight: 500;
+                margin-bottom: 0;
+                letter-spacing: 0.25rem;
+                line-height: 1.5;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 3.25rem;
+                font-weight: 500;
+                letter-spacing: 0.125rem;
+                line-height: 1.5;
+            }
+        }
+
+        &-photo {
+            margin-top: -3.2rem;
+            float: right;
+            object-fit: cover;
+            width: 70%;
+            height: 45rem;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        }
+    }
+
+    &-content {
+        background-color: #fff;
+        padding: 4rem;
+
+        h2 {
+            font-size: 2.275rem;
+            font-weight: 500;
+            color: $text-color;
+            letter-spacing: 0.125rem;
+        }
+    }
+
+    &-service {
+        background-color: $info-color;
+        padding: 6.25rem;
+
+        &-heading {
+            margin-bottom: 2.125rem;
+
+            span {
+                font-weight: 600;
+            }
+
+            * {
+                font-size: 2.875rem;
+                font-weight: 500;
+                color: $text-color;
+                letter-spacing: 0.125rem;
+                line-height: 1.5;
+            }
+        }
+
+        &-content {
+            .card {
+                border: 1px solid $info-color;
+                border-radius: 1.5rem;
+
+                .card-body {
+                    .card-icon {
+                        max-width: 42px;
+                        margin-right: 1rem;
+                    }
+
+                    .card-title {
+                        font-size: 1.25rem;
+                        font-weight: 400;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &-question {
+        background-color: #fff;
+        padding: 6.25rem;
+
+        &-heading {
+            margin-bottom: 2.125rem;
+
+            * {
+                font-size: 2.875rem;
+                font-weight: 600;
+                color: $text-color;
+                letter-spacing: 0.125rem;
+                line-height: 1.5;
+            }
+        }
+
+        &-content {
+            &-photo {
+                width: 100%;
+            }
+
+            .card {
+                background-color: rgba($color: $primary-color, $alpha: 0.2);
+                border: 2px solid $primary-color;
+                border-radius: 1.25rem;
+
+                .card-icon {
+                    max-width: 46px;
+                    margin-right: 1rem;
+                }
+
+                .card-title {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: $text-color;
+                    letter-spacing: 0.125rem;
+                }
+            }
+        }
+    }
+}
