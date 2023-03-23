@@ -19,6 +19,12 @@ body {
     font-size: 1rem;
 }
 
+.error {
+    font-size: 1.25rem;
+    color: #fc2947;
+    margin-left: 0.875rem;
+}
+
 .navbar-custom {
     padding: 1.25rem 0;
     background: #fff;

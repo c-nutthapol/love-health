@@ -93,10 +93,10 @@
                                             <span class="d-inline-block ms-2">ไม่ดี</span>
                                         </label>
                                     </div>
-                                    @error('emotion')
-                                        <span class="error">{{ $message }}</span>
-                                    @enderror
                                 </div>
+                                @error('emotion')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="col-12">
