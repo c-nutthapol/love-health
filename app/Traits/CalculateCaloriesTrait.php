@@ -36,7 +36,7 @@ trait CalculateCaloriesTrait
         }
 
         // Calculate BMR and total calories for the day
-        $total = $bmr + $consumed - $burned;
+        $total = round($bmr + $consumed - $burned);
 
         if ($total < 1200) {
             return 'คุณต้องเพิ่มปริมาณแคลอรี่ในแต่ละวัน ' . $total;

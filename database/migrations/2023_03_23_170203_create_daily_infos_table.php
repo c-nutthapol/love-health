@@ -18,6 +18,9 @@ return new class extends Migration
             $table->bigInteger('posture_id', 0, 1)->comment('รหัสท่าออกกำลังกาย');
             $table->integer('time_exercising')->comment('เวลาที่ใช้ออกกำลังกาย (นาที)');
             $table->string('emotion')->comment('อารมณ์ความรู้สึก');
+            $table->integer('weight')->comment('น้ำหนัก');
+            $table->integer('height')->comment('ส่วนสูง');
+            $table->integer('age')->comment('อายุ');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();

@@ -82,6 +82,10 @@ class FoodExerciseSeeder extends Seeder
         ];
         $exercisePostures = [
             [
+                'name' => 'นั่งเฉยๆ',
+                'calorie' => 14,
+            ],
+            [
                 'name' => 'ปั่นจักรงาน',
                 'calorie' => 500,
             ],

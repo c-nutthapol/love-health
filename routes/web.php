@@ -19,7 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
-Route::view('/form', 'form')->name('form');
+Route::middleware('auth')->group(function () {
+    Route::view('/form', 'form')->name('form');
+});
+
 
 Route::view('/login', 'login')->name('login');
 Route::get('/logout', function () {
