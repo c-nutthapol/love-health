@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('food', function (Blueprint $table) {
             $table->id();
-            $table->stirng('name')->comment('ชื่ออาหาร');
+            $table->string('name')->comment('ชื่ออาหาร');
             $table->double('calorie', 7, 2)->comment('แคลอรี่');
-
-            $table->timestamps();
         });
     }
 
