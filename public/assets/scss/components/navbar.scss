@@ -1,0 +1,47 @@
+.navbar-custom {
+    padding: 1.25rem 0;
+    background: #fff;
+
+    .navbar-brand {
+        padding: 0;
+        margin: 0;
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: 0.25rem;
+            color: $text-color;
+        }
+
+        img {
+            max-width: 62px;
+            margin-right: 0.5rem;
+        }
+
+        span {
+            font-size: 1.875rem;
+            color: $primary-color;
+        }
+    }
+
+    .nav-item {
+        .nav-link {
+            font-size: 1.125rem;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+            line-height: 0;
+            padding: 0;
+            color: $text-color;
+            opacity: 0.8;
+
+            &.active {
+                color: $primary-color;
+                font-weight: 500;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 3.25rem;
+        }
+    }
+}

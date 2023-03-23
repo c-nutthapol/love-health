@@ -1,0 +1,13 @@
+footer {
+    background-color: rgba($color: $primary-color, $alpha: 0.6);
+    padding: 0.8rem 0;
+    font-size: 0.874rem;
+    font-weight: 400;
+    letter-spacing: 0.125rem;
+    color: $text-color;
+
+    span {
+        font-size: 0.874rem;
+        font-weight: 700;
+    }
+}

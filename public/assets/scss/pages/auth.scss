@@ -1,0 +1,52 @@
+.auth-page {
+    background-color: $info-color;
+    min-height: 100vh;
+
+    .card {
+        position: relative;
+        padding: 2rem;
+        border: none;
+        border-radius: 1rem;
+        box-shadow: rgba($color: $primary-color, $alpha: 0.2) 0px 10px 50px;
+
+        &-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0.875rem 1rem;
+            font-size: 1.5rem;
+            color: $text-color;
+            text-decoration: none;
+
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &-title {
+        position: relative;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $text-color;
+        letter-spacing: 0.15rem;
+        margin-bottom: 4.5rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            background-color: $text-color;
+            bottom: -12px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    &-btn {
+        margin-top: 2rem;
+    }
+}

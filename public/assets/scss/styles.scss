@@ -1,0 +1,26 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+$primary-color: #62cdff;
+$secondary-color: #00a2ef;
+$info-color: #eefbff;
+$light-color: #e6f4f1;
+$text-color: #364954;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+    font-family: "IBM Plex Sans Thai", sans-serif !important;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+@import "./components/index.scss";
+@import "./pages/home.scss";
+@import "./pages/about.scss";
+@import "./pages/auth.scss";
+@import "./pages/form.scss";
