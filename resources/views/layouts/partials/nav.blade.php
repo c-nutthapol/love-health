@@ -36,6 +36,9 @@
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
+                                    <a class="dropdown-item" href="{{ route('history') }}">ประวัติข้อมูลประจำ</a>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}">ออกจากระบบ</a>
                                 </li>
                             </ul>
@@ -45,8 +48,6 @@
                             สมัครสมาชิก
                         </a>
                     @endif
-
-
                 </div>
             </div>
         </div>

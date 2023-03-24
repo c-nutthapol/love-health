@@ -19,8 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
+
 Route::middleware('auth')->group(function () {
     Route::view('/form', 'form')->name('form');
+    Route::view('/history', 'history')->name('history');
 });
 
 
@@ -30,4 +32,5 @@ Route::get('/logout', function () {
     session()->flush();
     return redirect()->route('home');
 })->name('logout');
+
 Route::view('/register', 'register')->name('register');
