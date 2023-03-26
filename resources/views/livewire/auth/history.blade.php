@@ -14,6 +14,7 @@
                                 <th class="text-center">น้ำหนัก</th>
                                 <th class="text-center">ส่วนสูง</th>
                                 <th class="text-center">อายุ</th>
+                                <th class="text-center">แคลอรี่</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,10 +43,11 @@
                                     <td class="text-center">{{ $daily_info->weight }} กก.</td>
                                     <td class="text-center">{{ $daily_info->height }} ซม.</td>
                                     <td class="text-center">{{ $daily_info->age }} ปี</td>
+                                    <td class="text-center">{{ $daily_info->calories }}</td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="8" class="text-center"> ไม่พบข้อมูล </td>
+                                    <td colspan="9" class="text-center"> ไม่พบข้อมูล </td>
                                 </tr>
                             @endforelse
                         </tbody>
