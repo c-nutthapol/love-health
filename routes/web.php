@@ -34,3 +34,8 @@ Route::get('/logout', function () {
 })->name('logout');
 
 Route::view('/register', 'register')->name('register');
+
+Route::name('admin.')->prefix('admin')->group(function () {
+    Route::view('/', 'admin.home')->name('home');
+    Route::view('/login', 'admin.login')->name('login');
+});
