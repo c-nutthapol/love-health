@@ -15,6 +15,7 @@
         @endif
     </title>
 
+    @livewireStyles
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <link href="{{ asset('assets/admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css" />
@@ -49,19 +50,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">เข้าสู่ระบบ</h1>
                                     </div>
-                                    <form class="user">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp" placeholder="อีเมล">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="รหัสผ่าน">
-                                        </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            เข้าสู่ระบบ
-                                        </a>
-                                    </form>
+                                    @livewire('admin.login')
                                 </div>
                             </div>
                         </div>
@@ -74,6 +63,13 @@
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    @livewireScripts
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('vendor/livewire-alert/livewire-alert.js') }}"></script>
+    <x-livewire-alert::flash />
+
     <!-- Bootstrap core JavaScript -->
     <script src="{{ asset('assets/admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -85,6 +81,20 @@
     <script src="{{ asset('assets/admin/js/sb-admin-2.min.js') }}"></script>
     @yield('script')
     @stack('script')
+    <script>
+        $("a[target=popup]").click(function() {
+            let href = $(this).prop('href');
+            window.open(href, 'popup', 'width=600,height=600,scrollbars=yes');
+        });
+
+        Livewire.on("redirect_page", event => {
+            let url = event.url
+            let delay = event.delay ?? 3000
+            setTimeout(function() {
+                window.location = url;
+            }, delay);
+        });
+    </script>
 </body>
 
 </html>

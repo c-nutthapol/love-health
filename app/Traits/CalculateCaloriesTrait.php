@@ -26,7 +26,7 @@ trait CalculateCaloriesTrait
         return $exerciseTime * ($burned_hour / 60);
     }
 
-    public function calories($bmr, $consumed, $burned, $mentalHealth)
+    public function caloriesRecommend($bmr, $consumed, $burned, $mentalHealth)
     {
 
         if ($mentalHealth == 'good') {
@@ -45,5 +45,17 @@ trait CalculateCaloriesTrait
         } else {
             return 'ปริมาณแคลอรี่ในแต่ละวันของคุณอยู่ในช่วงที่แนะนำ แคลอรี่ของคุณ ' . $total;
         }
+    }
+    public function calories($bmr, $consumed, $burned, $mentalHealth)
+    {
+
+        if ($mentalHealth == 'good') {
+            $burned *= 1.1;
+        } else if ($mentalHealth == 'poor') {
+            $burned *= 0.9;
+        }
+
+        // Calculate BMR and total calories for the day
+        return round($bmr + $consumed - $burned);
     }
 }

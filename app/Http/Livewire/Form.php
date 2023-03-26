@@ -55,7 +55,7 @@ class Form extends Component
             $food = Food::find($validatedData['food_id']);
             $bmr = $this->bmr($validatedData['weight'], $validatedData['height'], $validatedData['age'], auth()->user()->gender);
             $burned = $this->burned($validatedData['time_exercising'], $posture->calorie);
-            $calories = $this->calories($bmr, $food->calorie, $burned, $validatedData['emotion']);
+            $calories = $this->caloriesRecommend($bmr, $food->calorie, $burned, $validatedData['emotion']);
             $this->alert('success', 'คำนวนแคลอรี่เสร็จสิ้น', [
                 'text' => $calories,
                 'position' => 'center',

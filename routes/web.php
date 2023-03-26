@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
 
 Route::view('/login', 'login')->name('login');
 Route::get('/logout', function () {
-    auth()->logout();
+    auth('web')->logout();
     session()->flush();
     return redirect()->route('home');
 })->name('logout');
@@ -36,6 +36,13 @@ Route::get('/logout', function () {
 Route::view('/register', 'register')->name('register');
 
 Route::name('admin.')->prefix('admin')->group(function () {
-    Route::view('/', 'admin.home')->name('home');
     Route::view('/login', 'admin.login')->name('login');
+    Route::get('/logout', function () {
+        auth('admin')->logout();
+        session()->flush();
+        return redirect()->route('admin.login');
+    })->name('logout');
+    Route::middleware('auth:admin')->group(function () {
+        Route::view('/', 'admin.home')->name('home');
+    });
 });
