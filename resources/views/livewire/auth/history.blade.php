@@ -17,9 +17,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($daily_infos as $daily_info)
+                            @forelse ($daily_infos as $key => $daily_info)
                                 <tr>
-                                    <td class="text-center">1</td>
+                                    <td class="text-center">{{ $daily_infos->firstItem() + $key }}</td>
                                     <td>{{ $daily_info->food->name }}</td>
                                     <td>{{ $daily_info->posture->name }}</td>
                                     <td>{{ $daily_info->time_exercising }} นาที</td>
