@@ -48,7 +48,6 @@
                                     <td colspan="8" class="text-center"> ไม่พบข้อมูล </td>
                                 </tr>
                             @endforelse
-
                         </tbody>
                     </table>
                 </div>
