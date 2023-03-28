@@ -36,7 +36,7 @@
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('history') }}">ประวัติข้อมูลประจำ</a>
+                                    <a class="dropdown-item" href="{{ route('history') }}">ประวัติข้อมูลสุขภาพ</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}">ออกจากระบบ</a>

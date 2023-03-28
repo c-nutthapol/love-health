@@ -23,6 +23,13 @@ Route::view('/about', 'about')->name('about');
 Route::middleware('auth')->group(function () {
     Route::view('/form', 'form')->name('form');
     Route::view('/history', 'history')->name('history');
+
+    // ผลรวมน้ำหนักทั้งหมดในแต่ละครั้งที่กรอก
+    Route::view('/total-weight', 'chart.total-weight')->name('total-weight');
+    // แคลของการกิน และ แคลออกกำลังกาย
+    Route::view('/calories-eating', 'chart.calories-eating')->name('calories-eating');
+    // แคลรวมของกินและออกกำลังกาย
+    Route::view('/total-calories', 'chart.total-calories')->name('total-calories');
 });
 
 

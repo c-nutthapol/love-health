@@ -519,7 +519,6 @@ footer span {
     display: flex;
     align-items: end;
     padding-top: 4rem;
-    padding-bottom: 2rem;
 }
 
 .history-page-heading::after {
@@ -532,7 +531,16 @@ footer span {
     height: 100%;
 }
 
-.history-page-heading__title {
+.history-page-heading .nav-tabs {
+    position: relative;
+    z-index: 1;
+}
+
+.history-page-content {
+    padding-top: 4rem;
+}
+
+.history-page-content__title {
     position: relative;
     font-size: 2.875rem;
     font-weight: 700;
@@ -542,11 +550,8 @@ footer span {
     z-index: 1;
 }
 
-.history-page-content {
-    padding-top: 4rem;
-}
-
 .history-page-content .table {
+    margin-top: 2rem;
     color: var(--text-color);
 }
 
