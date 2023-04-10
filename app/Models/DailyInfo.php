@@ -33,4 +33,13 @@ class DailyInfo extends Model
         $burned = $this->burned($this->time_exercising, $this->posture->calorie);
         return $this->calories($bmr, $this->food->calorie, $burned, $this->emotion);
     }
+    public function getEatingAttribute()
+    {
+
+        return  $this->food->calorie;
+    }
+    public function getBurnedAttribute()
+    {
+        return  $this->burned($this->time_exercising, $this->posture->calorie);
+    }
 }
